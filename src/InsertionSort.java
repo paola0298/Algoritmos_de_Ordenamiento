@@ -19,6 +19,7 @@ public class InsertionSort <T extends Comparable<T>>{
             }
             list.set(j+1, key);
         }
+        list.printList();
           return list;
     }
 
