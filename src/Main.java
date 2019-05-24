@@ -11,7 +11,9 @@ public class Main {
 //        list.set(1,15);
         //list.set(2,10);
 //        list = list.BubbleSort(list);
-        list = list.SelectionSort(list);
+//        list = list.SelectionSort(list);
+        list.SelectionSort(list);
         list.printList();
+
     }
 }

@@ -1,4 +1,4 @@
-
+package TareaExtraclase;
 public class  LinkedList <T extends Comparable<T>>{
 
     private int size;
@@ -22,7 +22,7 @@ public class  LinkedList <T extends Comparable<T>>{
             Node<T> temp = this.head;
             while(temp.getNext()!=null)
                 temp = temp.getNext();
-            temp.setNext(newElement);
+                temp.setNext(newElement);
         }
         this.size++;
     }
@@ -129,27 +129,4 @@ public class  LinkedList <T extends Comparable<T>>{
     }
 
 
-    public LinkedList SelectionSort(LinkedList lista){
-        int arrayLength = lista.getSize();
-
-        for (int unsortIndex = arrayLength - 1; unsortIndex > 0; unsortIndex--) {
-            int largest = 0;
-            for (int i = 1; i <= unsortIndex; i++) {
-                if(lista.Comparar(lista.get(i), lista.get(largest))){
-                    largest = i;
-                }
-            }
-            lista = swap(lista, largest, unsortIndex);
-        }
-        return lista;
-    }
-
-    public LinkedList swap(LinkedList lista, int x, int y) {
-        T temp = (T) lista.get(x);
-        lista.set(x, lista.get(y));
-//        collection[x] = collection[y];
-        lista.set(y, temp);
-//        collection[y] = temp;
-        return lista;
-    }
 }
