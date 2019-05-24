@@ -76,18 +76,37 @@ public class  LinkedList <T extends Comparable<T>>{
         return false;
     }
 
-    public void printList(){
-        Node<T> temp = this.head;
-        if (temp == null){
-            System.out.println("Error, lista nula");//Brayan: Se añade para determinar si la lista está vacía
-        }else {
-            while (temp != null) {
-                System.out.print(temp.getValue()+",");
-                temp = temp.getNext();
+    public String toString() {
+        Node currentNode = this.head;
+
+        StringBuffer result = new StringBuffer();
+
+        for (int i = 0; currentNode != null; i++)
+        {
+            if (i > 0)
+            {
+                result.append(",");
             }
-            System.out.println("");
+            Object element = currentNode.getValue();
+
+            result.append(element == null ? "" : element);
+            currentNode = currentNode.getNext();
         }
+        return result.toString();
     }
+
+//    public void printList(){
+//        Node<T> temp = this.head;
+//        if (temp == null){
+//            System.out.println("Error, lista nula");//Brayan: Se añade para determinar si la lista está vacía
+//        }else {
+//            while (temp != null) {
+//                System.out.print(temp.getValue()+",");
+//                temp = temp.getNext();
+//            }
+//            System.out.println("");
+//        }
+//    }
 
     public T get(int index){
         Node<T> tmp = this.head;
@@ -129,20 +148,7 @@ public class  LinkedList <T extends Comparable<T>>{
     }
 
 
-    public LinkedList SelectionSort(LinkedList lista){
-        int arrayLength = lista.getSize();
 
-        for (int unsortIndex = arrayLength - 1; unsortIndex > 0; unsortIndex--) {
-            int largest = 0;
-            for (int i = 1; i <= unsortIndex; i++) {
-                if(lista.Comparar(lista.get(i), lista.get(largest))){
-                    largest = i;
-                }
-            }
-            lista = swap(lista, largest, unsortIndex);
-        }
-        return lista;
-    }
 
     public LinkedList swap(LinkedList lista, int x, int y) {
         T temp = (T) lista.get(x);

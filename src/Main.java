@@ -8,12 +8,13 @@ public class Main {
         list.addLast(32);
         list.addLast(4);
         list.addLast(1);
-//        list.set(1,15);
+        System.out.println(list);
+        list.set(1,15);
         //list.set(2,10);
-//        list = list.BubbleSort(list);
-//        list = list.SelectionSort(list);
-        list.SelectionSort(list);
-        list.printList();
+
+        System.out.println(list);
+
+        System.out.println(list.get(3));
 
     }
 }

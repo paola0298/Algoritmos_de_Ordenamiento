@@ -33,5 +33,4 @@ public class SelectionSort<T extends Comparable<T>> {
 //        collection[y] = temp;
             return lista;
         }
-    }
 }
