@@ -22,27 +22,13 @@ public class QuickSort<T extends Comparable<T>> {
         T pivote = listToOrder.get(end);
         int pIndex = start;
 
-        /*
-        A.compareTo(B)
-
-        Devuelve -1 si B es mayor que A
-        Devuelve 0 si ambos son iguales
-        Y devuelve 1 si A es mayor que B
-         */
-
         for (int i=start; i<end; i++){
-//            System.out.println(listToOrder.get(i));
-//            System.out.println(pivote);
-//            System.out.println(listToOrder.get(i).compareTo(pivote) <= 0);
             if (listToOrder.get(i).compareTo(pivote) <= 0){
                 T temp = listToOrder.get(i);
                 listToOrder.set(i, listToOrder.get(pIndex));
                 listToOrder.set(pIndex, temp);
                 pIndex++;
             }
-//            System.out.println("list ");
-//            listToOrder.printList();
-//            System.out.println("\n");
         }
 
         T temp = listToOrder.get(pIndex);
