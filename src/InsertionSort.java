@@ -13,7 +13,7 @@ public class InsertionSort <T extends Comparable<T>>{
         for (int i = 1; i < list.getSize();i++){
             T key = list.get(i);
             int j = i-1;
-            while (j >= 0 && list.Comparar(list.get(j), key)){
+            while (j >= 0 && list.get(j).compareTo(key) == 1){
                 list.set(j+1,list.get(j));
                 j = j - 1;
             }
