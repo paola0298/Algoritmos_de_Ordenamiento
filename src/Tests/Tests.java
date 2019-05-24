@@ -196,5 +196,122 @@ public class Tests {
         assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", prueba5_5.toString(), prueba5.toString());
     }
 
+    @Test
+    public void BubbleSortTest(){
+        LinkedList<Integer> list = new LinkedList<>();
+        LinkedList<String> list1 = new LinkedList<>();
+        LinkedList<Double> list2 = new LinkedList<>();
+        BubbleSort<Integer> bubbleInteger = new BubbleSort<>(list);
+        BubbleSort<String> bubbleString = new BubbleSort<>(list1);
+        BubbleSort<Double> bubbleDouble = new BubbleSort<>(list2);
 
+        LinkedList<Integer> pruebaList1 = new LinkedList<>();
+        pruebaList1.addLast(7);
+        pruebaList1.addLast(2);
+        pruebaList1.addLast(1);
+        pruebaList1.addLast(6);
+        pruebaList1.addLast(8);
+        pruebaList1.addLast(5);
+        pruebaList1.addLast(3);
+        pruebaList1.addLast(4);
+
+        LinkedList<Integer> pruebaList1_2 = new LinkedList<>();
+        pruebaList1_2.addLast(1);
+        pruebaList1_2.addLast(2);
+        pruebaList1_2.addLast(3);
+        pruebaList1_2.addLast(4);
+        pruebaList1_2.addLast(5);
+        pruebaList1_2.addLast(6);
+        pruebaList1_2.addLast(7);
+        pruebaList1_2.addLast(8);
+
+        LinkedList<String> pruebaList2 = new LinkedList<>();
+        pruebaList2.addLast("b");
+        pruebaList2.addLast("z");
+        pruebaList2.addLast("g");
+        pruebaList2.addLast("u");
+        pruebaList2.addLast("a");
+        pruebaList2.addLast("j");
+        pruebaList2.addLast("p");
+        pruebaList2.addLast("m");
+
+        LinkedList<String> pruebaLista3 = new LinkedList<>();
+        pruebaLista3.addLast("a");
+        pruebaLista3.addLast("b");
+        pruebaLista3.addLast("g");
+        pruebaLista3.addLast("j");
+        pruebaLista3.addLast("m");
+        pruebaLista3.addLast("p");
+        pruebaLista3.addLast("u");
+        pruebaLista3.addLast("z");
+
+        LinkedList<Double> pruebaLista3_1 = new LinkedList<>();
+        pruebaLista3_1.addLast(1.2);
+        pruebaLista3_1.addLast(2.4);
+        pruebaLista3_1.addLast(1.9);
+        pruebaLista3_1.addLast(6.7);
+        pruebaLista3_1.addLast(80.5);
+        pruebaLista3_1.addLast(55.5);
+        pruebaLista3_1.addLast(32.5);
+        pruebaLista3_1.addLast(455.2);
+
+        LinkedList<Double> pruebaLista3_3 = new LinkedList<>();
+        pruebaLista3_3.addLast(1.2);
+        pruebaLista3_3.addLast(1.9);
+        pruebaLista3_3.addLast(2.4);
+        pruebaLista3_3.addLast(6.7);
+        pruebaLista3_3.addLast(32.5);
+        pruebaLista3_3.addLast(55.5);
+        pruebaLista3_3.addLast(80.5);
+        pruebaLista3_3.addLast(455.2);
+
+
+        LinkedList<Integer> pruebaList4 = new LinkedList<>();
+        pruebaList4.addLast(95);
+        pruebaList4.addLast(83);
+        pruebaList4.addLast(15);
+        pruebaList4.addLast(69);
+        pruebaList4.addLast(451);
+
+        LinkedList<Integer> prueba4_4 = new LinkedList<>();
+        prueba4_4.addLast(15);
+        prueba4_4.addLast(69);
+        prueba4_4.addLast(83);
+        prueba4_4.addLast(95);
+        prueba4_4.addLast(451);
+
+
+        LinkedList<String> pruebaList5 = new LinkedList<>();
+        pruebaList5.addLast("q");
+        pruebaList5.addLast("w");
+        pruebaList5.addLast("e");
+        pruebaList5.addLast("r");
+        pruebaList5.addLast("t");
+        pruebaList5.addLast("y");
+        pruebaList5.addLast("u");
+        pruebaList5.addLast("i");
+
+        LinkedList<String> pruebaList5_5 = new LinkedList<>();
+        pruebaList5_5.addLast("e");
+        pruebaList5_5.addLast("i");
+        pruebaList5_5.addLast("q");
+        pruebaList5_5.addLast("r");
+        pruebaList5_5.addLast("t");
+        pruebaList5_5.addLast("u");
+        pruebaList5_5.addLast("w");
+        pruebaList5_5.addLast("y");
+
+        bubbleInteger.Sort(pruebaList1);
+        bubbleString.Sort(pruebaList2);
+        bubbleDouble.Sort(pruebaLista3_1);
+        bubbleInteger.Sort(pruebaList4);
+        bubbleString.Sort(pruebaList5);
+
+
+        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1.toString(), pruebaList1.toString());
+        assertEquals("El resultado debe ser a,b,g,j,m,p,u,z", pruebaList2.toString(), pruebaList2.toString());
+        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", pruebaLista3_1.toString(), pruebaLista3_1.toString());
+        assertEquals("El resultado debe ser 15,69,83,95,451", pruebaList4.toString(), pruebaList4.toString());
+        assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", pruebaList5.toString(), pruebaList5.toString());
+    }
 }
