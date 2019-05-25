@@ -254,14 +254,255 @@ public class Tests {
         merge1_s.addLast(71);
         merge1_s.addLast(102);
 
+        LinkedList<Integer> merge2_t = new LinkedList<>();
+        merge2_t.addLast(150);
+        merge2_t.addLast(157);
+        merge2_t.addLast(259);
+        merge2_t.addLast(5);
+        merge2_t.addLast(1);
+        merge2_t.addLast(98);
+        merge2_t.addLast(75);
+        merge2_t.addLast(15);
+        merge2_t.addLast(19);
+        merge2_t.addLast(2);
+
+        LinkedList<Integer> merge2_s = new LinkedList<>();
+        merge2_s.addLast(1);
+        merge2_s.addLast(2);
+        merge2_s.addLast(5);
+        merge2_s.addLast(15);
+        merge2_s.addLast(19);
+        merge2_s.addLast(75);
+        merge2_s.addLast(98);
+        merge2_s.addLast(150);
+        merge2_s.addLast(157);
+        merge2_s.addLast(259);
+
+
+        LinkedList<Integer> merge3_t = new LinkedList<>();
+        merge3_t.addLast(63);
+        merge3_t.addLast(102);
+        merge3_t.addLast(2);
+        merge3_t.addLast(485);
+        merge3_t.addLast(711);
+        merge3_t.addLast(12);
+        merge3_t.addLast(55);
+        merge3_t.addLast(178);
+        merge3_t.addLast(15);
+        merge3_t.addLast(27);
+
+        LinkedList<Integer> merge3_s = new LinkedList<>();
+        merge3_s.addLast(2);
+        merge3_s.addLast(12);
+        merge3_s.addLast(15);
+        merge3_s.addLast(27);
+        merge3_s.addLast(55);
+        merge3_s.addLast(63);
+        merge3_s.addLast(102);
+        merge3_s.addLast(178);
+        merge3_s.addLast(485);
+        merge3_s.addLast(711);
+
+        LinkedList<Integer> merge4_t = new LinkedList<>();
+        merge4_t.addLast(45);
+        merge4_t.addLast(54);
+        merge4_t.addLast(456);
+        merge4_t.addLast(878);
+        merge4_t.addLast(4);
+        merge4_t.addLast(1);
+        merge4_t.addLast(84);
+        merge4_t.addLast(87);
+        merge4_t.addLast(12);
+        merge4_t.addLast(5);
+
+        LinkedList<Integer> merge4_s = new LinkedList<>();
+        merge4_s.addLast(1);
+        merge4_s.addLast(4);
+        merge4_s.addLast(5);
+        merge4_s.addLast(12);
+        merge4_s.addLast(45);
+        merge4_s.addLast(54);
+        merge4_s.addLast(84);
+        merge4_s.addLast(87);
+        merge4_s.addLast(456);
+        merge4_s.addLast(878);
+
+        LinkedList<Integer> merge5_t = new LinkedList<>();
+        merge5_t.addLast(9);
+        merge5_t.addLast(68);
+        merge5_t.addLast(5);
+        merge5_t.addLast(4);
+        merge5_t.addLast(765);
+        merge5_t.addLast(345);
+        merge5_t.addLast(7);
+        merge5_t.addLast(74);
+        merge5_t.addLast(67);
+        merge5_t.addLast(1);
+
+        LinkedList<Integer> merge5_s = new LinkedList<>();
+        merge5_s.addLast(1);
+        merge5_s.addLast(4);
+        merge5_s.addLast(5);
+        merge5_s.addLast(7);
+        merge5_s.addLast(9);
+        merge5_s.addLast(67);
+        merge5_s.addLast(68);
+        merge5_s.addLast(74);
+        merge5_s.addLast(345);
+        merge5_s.addLast(765);
+
         merge1_t = integerMergeSort.mergeSort(merge1_t);
+        merge2_t = integerMergeSort.mergeSort(merge2_t);
+        merge3_t = integerMergeSort.mergeSort(merge3_t);
+        merge4_t = integerMergeSort.mergeSort(merge4_t);
+        merge5_t = integerMergeSort.mergeSort(merge5_t);
 
         assertEquals("Prueba de MergeSort 1", merge1_s.toString(), merge1_t.toString());
+        assertEquals("Prueba de MergeSort 2", merge2_s.toString(), merge2_t.toString());
+        assertEquals("Prueba de MergeSort 3", merge3_s.toString(), merge3_t.toString());
+        assertEquals("Prueba de MergeSort 4", merge4_s.toString(), merge4_t.toString());
+        assertEquals("Prueba de MergeSort 5", merge5_s.toString(), merge5_t.toString());
 
     }
 
     @Test
     public void RadixSortTest() {
+
+        RadixSort radixSort = new RadixSort();
+
+        LinkedList<Integer> radix1_t = new LinkedList<>();
+        radix1_t.addLast(63);
+        radix1_t.addLast(102);
+        radix1_t.addLast(2);
+        radix1_t.addLast(45);
+        radix1_t.addLast(71);
+        radix1_t.addLast(12);
+        radix1_t.addLast(5);
+        radix1_t.addLast(17);
+        radix1_t.addLast(15);
+        radix1_t.addLast(27);
+
+        LinkedList<Integer> radix1_s = new LinkedList<>();
+        radix1_s.addLast(2);
+        radix1_s.addLast(5);
+        radix1_s.addLast(12);
+        radix1_s.addLast(15);
+        radix1_s.addLast(17);
+        radix1_s.addLast(27);
+        radix1_s.addLast(45);
+        radix1_s.addLast(63);
+        radix1_s.addLast(71);
+        radix1_s.addLast(102);
+
+        LinkedList<Integer> radix2_t = new LinkedList<>();
+        radix2_t.addLast(150);
+        radix2_t.addLast(157);
+        radix2_t.addLast(259);
+        radix2_t.addLast(5);
+        radix2_t.addLast(1);
+        radix2_t.addLast(98);
+        radix2_t.addLast(75);
+        radix2_t.addLast(15);
+        radix2_t.addLast(19);
+        radix2_t.addLast(2);
+
+        LinkedList<Integer> radix2_s = new LinkedList<>();
+        radix2_s.addLast(1);
+        radix2_s.addLast(2);
+        radix2_s.addLast(5);
+        radix2_s.addLast(15);
+        radix2_s.addLast(19);
+        radix2_s.addLast(75);
+        radix2_s.addLast(98);
+        radix2_s.addLast(150);
+        radix2_s.addLast(157);
+        radix2_s.addLast(259);
+
+
+        LinkedList<Integer> radix3_t = new LinkedList<>();
+        radix3_t.addLast(63);
+        radix3_t.addLast(102);
+        radix3_t.addLast(2);
+        radix3_t.addLast(485);
+        radix3_t.addLast(711);
+        radix3_t.addLast(12);
+        radix3_t.addLast(55);
+        radix3_t.addLast(178);
+        radix3_t.addLast(15);
+        radix3_t.addLast(27);
+
+        LinkedList<Integer> radix3_s = new LinkedList<>();
+        radix3_s.addLast(2);
+        radix3_s.addLast(12);
+        radix3_s.addLast(15);
+        radix3_s.addLast(27);
+        radix3_s.addLast(55);
+        radix3_s.addLast(63);
+        radix3_s.addLast(102);
+        radix3_s.addLast(178);
+        radix3_s.addLast(485);
+        radix3_s.addLast(711);
+
+        LinkedList<Integer> radix4_t = new LinkedList<>();
+        radix4_t.addLast(45);
+        radix4_t.addLast(54);
+        radix4_t.addLast(456);
+        radix4_t.addLast(878);
+        radix4_t.addLast(4);
+        radix4_t.addLast(1);
+        radix4_t.addLast(84);
+        radix4_t.addLast(87);
+        radix4_t.addLast(12);
+        radix4_t.addLast(5);
+
+        LinkedList<Integer> radix4_s = new LinkedList<>();
+        radix4_s.addLast(1);
+        radix4_s.addLast(4);
+        radix4_s.addLast(5);
+        radix4_s.addLast(12);
+        radix4_s.addLast(45);
+        radix4_s.addLast(54);
+        radix4_s.addLast(84);
+        radix4_s.addLast(87);
+        radix4_s.addLast(456);
+        radix4_s.addLast(878);
+
+        LinkedList<Integer> radix5_t = new LinkedList<>();
+        radix5_t.addLast(9);
+        radix5_t.addLast(68);
+        radix5_t.addLast(5);
+        radix5_t.addLast(4);
+        radix5_t.addLast(765);
+        radix5_t.addLast(345);
+        radix5_t.addLast(7);
+        radix5_t.addLast(74);
+        radix5_t.addLast(67);
+        radix5_t.addLast(1);
+
+        LinkedList<Integer> radix5_s = new LinkedList<>();
+        radix5_s.addLast(1);
+        radix5_s.addLast(4);
+        radix5_s.addLast(5);
+        radix5_s.addLast(7);
+        radix5_s.addLast(9);
+        radix5_s.addLast(67);
+        radix5_s.addLast(68);
+        radix5_s.addLast(74);
+        radix5_s.addLast(345);
+        radix5_s.addLast(765);
+
+        radixSort.radixSort(radix1_t);
+        radixSort.radixSort(radix2_t);
+        radixSort.radixSort(radix3_t);
+        radixSort.radixSort(radix4_t);
+        radixSort.radixSort(radix5_t);
+
+
+        assertEquals("Prueba de MergeSort 1", radix1_s.toString(), radix1_t.toString());
+        assertEquals("Prueba de MergeSort 2", radix2_s.toString(), radix2_t.toString());
+        assertEquals("Prueba de MergeSort 3", radix3_s.toString(), radix3_t.toString());
+        assertEquals("Prueba de MergeSort 4", radix4_s.toString(), radix4_t.toString());
+        assertEquals("Prueba de MergeSort 5", radix5_s.toString(), radix5_t.toString());
 
     }
 
