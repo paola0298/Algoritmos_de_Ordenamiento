@@ -9,18 +9,20 @@ public class InsertionSort <T extends Comparable<T>>{
         sort(l);
     }
 
-    public LinkedList sort(LinkedList<T> list) {
-        for (int i = 1; i < list.getSize();i++){
-            T key = list.get(i);
-            int j = i-1;
-            while (j >= 0 && list.get(j).compareTo(key) == 1){
-                list.set(j+1,list.get(j));
-                j = j - 1;
+    private LinkedList sort(LinkedList<T> list) {
+        for (int i = 1; i < list.getSize(); i++){
+            int current = i;
+            T key = list.get(current);
+            int j = current-1;
+            while (current > 0 && list.get(current-1).compareTo(key) > 0){
+                T temp = list.get(current);
+                list.set(current, list.get(current-1));
+                list.set(current-1, temp);
+                current--;
             }
-            list.set(j+1, key);
+
         }
-        System.out.println(list);
+        //System.out.println(list);
           return list;
     }
-
 }

@@ -22,22 +22,45 @@ public class Tests {
         prueba.addLast(66);
         prueba.addLast(20);
 
-        System.out.println("La lista original es:" + "\n");
-        System.out.println(prueba);
-        System.out.println("La lista ordenada es:" + "\n");
-        InsertionSort first = new InsertionSort(prueba);
+        LinkedList ordenado = new LinkedList();
+        ordenado.addLast(1);
+        ordenado.addLast(2);
+        ordenado.addLast(20);
+        ordenado.addLast(45);
+        ordenado.addLast(46);
+        ordenado.addLast(57);
+        ordenado.addLast(66);
+        ordenado.addLast(96);
+        ordenado.addLast(100);
+
+
+        InsertionSort first = new InsertionSort(ordenado);
+        assertEquals("El resultado debe ser "+ordenado.toString(), ordenado.toString(), ordenado.toString());
         //End of First Test//
 
         //Second Test//
         LinkedList<Integer> prueba2 = new LinkedList<>();
-        for (int i = 1; i<= 30;i++){
-            int random = new Random().nextInt();
-            prueba2.addLast(random);
-        }
-        System.out.println("La lista original es:" + "\n");
-        System.out.println(prueba2);
-        System.out.println("La lista ordenada es:" + "\n");
+//        for (int i = 1; i<= 30;i++){
+//            int random = new Random().nextInt();
+//            prueba2.addLast(random);
+//        }
+        prueba2.addLast(0);
+        prueba2.addLast(8);
+        prueba2.addLast(25);
+        prueba2.addLast(4);
+        prueba2.addLast(100);
+        prueba2.addLast(222);
+        prueba2.addLast(9);
+        LinkedList ordenado2 = new LinkedList();
+        ordenado2.addLast(0);
+        ordenado2.addLast(4);
+        ordenado2.addLast(8);
+        ordenado2.addLast(9);
+        ordenado2.addLast(25);
+        ordenado2.addLast(100);
+        ordenado2.addLast(222);
         InsertionSort second = new InsertionSort(prueba2);
+        assertEquals("El resultado debe ser "+ordenado2.toString(), ordenado2.toString(), prueba2.toString());
         //End of Second Test//
 
         //Third Test//
@@ -48,36 +71,51 @@ public class Tests {
         prueba3.addLast("d");
         prueba3.addLast("f");
         prueba3.addLast("e");
-        System.out.println("La lista original es:" + "\n");
-        System.out.println(prueba3);
-        System.out.println("La lista ordenada es:" + "\n");
+        LinkedList ordenado3 = new LinkedList();
+        ordenado3.addLast("a");
+        ordenado3.addLast("b");
+        ordenado3.addLast("c");
+        ordenado3.addLast("d");
+        ordenado3.addLast("e");
+        ordenado3.addLast("f");
         InsertionSort third = new InsertionSort(prueba3);
+        assertEquals("El resultado debe ser "+prueba3.toString(), ordenado3.toString(), prueba3.toString());
         //End of Third Test//
 
         //Fourth Test//
-
         LinkedList<Double> prueba4 = new LinkedList<>();
-        for(int i = 0; i <= 10; i++){
-            Double value = new Random().nextDouble();
-            prueba4.addLast(value);
-        }
-        System.out.println("La lista original es:" + "\n");
-        System.out.println(prueba4);
-        System.out.println("La lista ordenada es:" + "\n");
+        prueba4.addLast(0.123456789012344567823456123456);
+        prueba4.addLast(0.1);
+        prueba4.addLast(123456.0);
+        prueba4.addLast(0.099999999999999999999999999999999999999999);
+        prueba4.addLast(0.15);
+        prueba4.addLast(0.123456754521683546851435468765121685468754321685468);
+        LinkedList ordenado4 = new LinkedList();
+        ordenado4.addLast(0.099999999999999999999999999999999999999999);
+        ordenado4.addLast(0.1);
+        ordenado4.addLast(0.123456754521683546851435468765121685468754321685468);
+        ordenado4.addLast(0.123456789012344567823456123456);
+        ordenado4.addLast(0.15);
+        ordenado4.addLast(123456.0);
         InsertionSort fourth = new InsertionSort(prueba4);
+        assertEquals("El resultado debe ser "+prueba4.toString(), ordenado4.toString(), prueba4.toString());
         //End of Fourth Test//
 
         //Fifth Test//
         LinkedList<Float> prueba5 = new LinkedList<>();
-        for(int i = 0; i <= 10; i++){
-            Float value = new Random().nextFloat();
-            prueba5.addLast(value);
-        }
-        System.out.println("La lista original es:" + "\n");
-        System.out.println(prueba5);
-        System.out.println("La lista ordenada es:" + "\n");
+        prueba5.addLast((float) 0.0);
+        prueba5.addLast((float) 6873541354.1);
+        prueba5.addLast((float) 0.9);
+        prueba5.addLast((float) 3.14);
+        prueba5.addLast((float) 15.0);
+        LinkedList ordenado5 = new LinkedList();
+        ordenado5.addLast((float)0.0);
+        ordenado5.addLast((float)0.9);
+        ordenado5.addLast((float)3.14);
+        ordenado5.addLast((float)15.0);
+        ordenado5.addLast((float)6873541354.1);
         InsertionSort fifth = new InsertionSort(prueba5);
-
+        assertEquals("El resultado debe ser "+prueba5.toString(), ordenado5.toString(), prueba5.toString());
         //End of Fifth Test//
     }
 
