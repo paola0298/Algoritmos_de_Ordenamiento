@@ -189,11 +189,11 @@ public class Tests {
         quickString.quicksort(prueba5);
 
 
-        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", prueba1_1.toString(), prueba1.toString());
-        assertEquals("El resultado debe ser a,b,g,j,m,p,u,z", prueba2_2.toString(), prueba2.toString());
-        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", prueba3_3.toString(), prueba3.toString());
-        assertEquals("El resultado debe ser 15,69,83,95,451", prueba4_4.toString(), prueba4.toString());
-        assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", prueba5_5.toString(), prueba5.toString());
+        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", "1,2,3,4,5,6,7,8", prueba1.toString());
+        assertEquals("El resultado debe ser a,b,g,j,m,p,u,z", "a,b,g,j,m,p,u,z", prueba2.toString());
+        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", "1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", prueba3.toString());
+        assertEquals("El resultado debe ser 15,69,83,95,451", "15,69,83,95,451", prueba4.toString());
+        assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", "e,i,q,r,t,u,w,y", prueba5.toString());
     }
 
 
