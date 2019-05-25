@@ -33,4 +33,21 @@ public class SelectionSort<T extends Comparable<T>> {
 //        collection[y] = temp;
             return lista;
         }
+//        public static void main(String[] args) {
+//        LinkedList<Integer> list = new LinkedList<>();
+//        list.addLast(7);
+//        list.addLast(2);
+//        list.addLast(1);
+//        list.addLast(6);
+//        list.addLast(8);
+//        list.addLast(5);
+//        list.addLast(3);
+//        list.addLast(4);
+//        System.out.println(list);
+//        System.out.println("\n");
+//        SelectionSort<Integer> selection = new SelectionSort<>(list);
+//        selection.SortSelection(list);
+//
+//        System.out.println(list);
+//    }
 }
