@@ -1,5 +1,5 @@
 
-public class  LinkedList <T extends Comparable<T>>{
+public class  LinkedList <T extends Comparable<? super T>>{
 
     private int size;
     private Node<T> head;
@@ -76,23 +76,20 @@ public class  LinkedList <T extends Comparable<T>>{
         return false;
     }
 
+    @Override
     public String toString() {
-        Node currentNode = this.head;
-
-        StringBuffer result = new StringBuffer();
-
-        for (int i = 0; currentNode != null; i++)
-        {
-            if (i > 0)
-            {
-                result.append(",");
+        Node<T> currentNode = this.head;
+        StringBuilder result = new StringBuilder("[");
+        for (int i = 0; currentNode != null; i++) {
+            if (i > 0) {
+                result.append(", ");
             }
-            Object element = currentNode.getValue();
+            T element = currentNode.getValue();
 
             result.append(element == null ? "" : element);
             currentNode = currentNode.getNext();
         }
-        return result.toString();
+        return result.toString() + "]";
     }
 
 //    public void printList(){
