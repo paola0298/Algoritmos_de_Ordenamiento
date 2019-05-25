@@ -36,10 +36,6 @@ public class Tests {
 
         //Second Test//
         LinkedList<Integer> prueba2 = new LinkedList<>();
-//        for (int i = 1; i<= 30;i++){
-//            int random = new Random().nextInt();
-//            prueba2.addLast(random);
-//        }
         prueba2.addLast(0);
         prueba2.addLast(8);
         prueba2.addLast(25);
@@ -223,11 +219,11 @@ public class Tests {
         quickString.quicksort(prueba5);
 
 
-        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", "1,2,3,4,5,6,7,8", prueba1.toString());
-        assertEquals("El resultado debe ser a,b,g,j,m,p,u,z", "a,b,g,j,m,p,u,z", prueba2.toString());
-        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", "1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", prueba3.toString());
-        assertEquals("El resultado debe ser 15,69,83,95,451", "15,69,83,95,451", prueba4.toString());
-        assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", "e,i,q,r,t,u,w,y", prueba5.toString());
+        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", prueba1_1.toString(), prueba1.toString());
+        assertEquals("El resultado debe ser a,b,g,j,m,p,u,z", prueba2_2.toString(), prueba2.toString());
+        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2",prueba3_3.toString(), prueba3.toString());
+        assertEquals("El resultado debe ser 15,69,83,95,451", prueba4_4.toString(), prueba4.toString());
+        assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", prueba5_5.toString(), prueba5.toString());
     }
 
     @Test
@@ -393,14 +389,14 @@ public class Tests {
         pruebaLista3.addLast("z");
 
         LinkedList<Double> pruebaLista3_1 = new LinkedList<>();
+        pruebaLista3_1.addLast(32.5);
         pruebaLista3_1.addLast(1.2);
+        pruebaLista3_1.addLast(455.2);
         pruebaLista3_1.addLast(2.4);
-        pruebaLista3_1.addLast(1.9);
         pruebaLista3_1.addLast(6.7);
         pruebaLista3_1.addLast(80.5);
+        pruebaLista3_1.addLast(1.9);
         pruebaLista3_1.addLast(55.5);
-        pruebaLista3_1.addLast(32.5);
-        pruebaLista3_1.addLast(455.2);
 
         LinkedList<Double> pruebaLista3_3 = new LinkedList<>();
         pruebaLista3_3.addLast(1.2);
@@ -455,10 +451,10 @@ public class Tests {
         System.out.println(bubbleString.Sort(pruebaList5));
 
 
-        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1.toString(), pruebaList1.toString());
-        assertEquals("El resultado debe ser a,b,g,j,m,p,u,z", pruebaList2.toString(), pruebaList2.toString());
-        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", pruebaLista3_1.toString(), pruebaLista3_1.toString());
-        assertEquals("El resultado debe ser 15,69,83,95,451", pruebaList4.toString(), pruebaList4.toString());
-        assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", pruebaList5.toString(), pruebaList5.toString());
+        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1_2.toString(), pruebaList1.toString());
+        assertEquals("El resultado debe ser a,b,g,j,m,p,u,z", pruebaLista3.toString(), pruebaList2.toString());
+        assertEquals("El resultado debe ser 1.2,1.92.4,6.7,32.5,55.5,80.5,455.2", pruebaLista3_3.toString(), pruebaLista3_1.toString());
+        assertEquals("El resultado debe ser 15,69,83,95,451", prueba4_4.toString(), pruebaList4.toString());
+        assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", pruebaList5_5.toString(), pruebaList5.toString());
     }
 }
