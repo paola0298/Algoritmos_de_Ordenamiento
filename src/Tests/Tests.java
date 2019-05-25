@@ -575,9 +575,9 @@ public class Tests {
         selectionInteger.selectionSort(pruebaList4);
 
 
-        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1.toString(), pruebaList1.toString());
-        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", pruebaLista3_1.toString(), pruebaLista3_1.toString());
-        assertEquals("El resultado debe ser 15,69,83,95,451", pruebaList4.toString(), pruebaList4.toString());
+        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1_2.toString(), pruebaList1.toString());
+        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", pruebaLista3_3.toString(), pruebaLista3_1.toString());
+        assertEquals("El resultado debe ser 15,69,83,95,451", prueba4_4.toString(), pruebaList4.toString());
     }
 
     @Test
