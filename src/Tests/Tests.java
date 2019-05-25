@@ -511,9 +511,9 @@ public class Tests {
         LinkedList<Integer> list = new LinkedList<>();
         LinkedList<String> list1 = new LinkedList<>();
         LinkedList<Double> list2 = new LinkedList<>();
-        SelectionSort<Integer> selectionInteger = new SelectionSort<>(list);
-        SelectionSort<String> selectionString = new SelectionSort<>(list1);
-        SelectionSort<Double> selectionDouble = new SelectionSort<>(list2);
+        SelectionSort<Integer> selectionInteger = new SelectionSort<>();
+        SelectionSort<String> selectionString = new SelectionSort<>();
+        SelectionSort<Double> selectionDouble = new SelectionSort<>();
 
         LinkedList<Integer> pruebaList1 = new LinkedList<>();
         pruebaList1.addLast(7);
@@ -570,9 +570,9 @@ public class Tests {
         prueba4_4.addLast(95);
         prueba4_4.addLast(451);
 
-        System.out.println(selectionInteger.SortSelection(pruebaList1));
-        System.out.println(selectionDouble.SortSelection(pruebaLista3_1));
-        System.out.println(selectionInteger.SortSelection(pruebaList4));
+        selectionInteger.selectionSort(pruebaList1);
+        selectionDouble.selectionSort(pruebaLista3_1);
+        selectionInteger.selectionSort(pruebaList4);
 
 
         assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1.toString(), pruebaList1.toString());
@@ -585,9 +585,9 @@ public class Tests {
         LinkedList<Integer> list = new LinkedList<>();
         LinkedList<String> list1 = new LinkedList<>();
         LinkedList<Double> list2 = new LinkedList<>();
-        BubbleSort<Integer> bubbleInteger = new BubbleSort<>(list);
-        BubbleSort<String> bubbleString = new BubbleSort<>(list1);
-        BubbleSort<Double> bubbleDouble = new BubbleSort<>(list2);
+        BubbleSort<Integer> bubbleInteger = new BubbleSort<>();
+        BubbleSort<String> bubbleString = new BubbleSort<>();
+        BubbleSort<Double> bubbleDouble = new BubbleSort<>();
 
         LinkedList<Integer> pruebaList1 = new LinkedList<>();
         pruebaList1.addLast(7);
@@ -685,11 +685,11 @@ public class Tests {
         pruebaList5_5.addLast("w");
         pruebaList5_5.addLast("y");
 
-        System.out.println(bubbleInteger.Sort(pruebaList1));
-        System.out.println(bubbleString.Sort(pruebaList2));
-        System.out.println(bubbleDouble.Sort(pruebaLista3_1));
-        System.out.println(bubbleInteger.Sort(pruebaList4));
-        System.out.println(bubbleString.Sort(pruebaList5));
+        bubbleInteger.bubbleSort(pruebaList1);
+        bubbleString.bubbleSort(pruebaList2);
+        bubbleDouble.bubbleSort(pruebaLista3_1);
+        bubbleInteger.bubbleSort(pruebaList4);
+        bubbleString.bubbleSort(pruebaList5);
 
 
         assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1_2.toString(), pruebaList1.toString());
