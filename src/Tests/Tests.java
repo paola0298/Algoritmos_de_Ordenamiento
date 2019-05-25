@@ -1,10 +1,6 @@
-
 import org.junit.Test;
-import org.hamcrest.*;
-
 import java.util.Random;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class Tests {
 
@@ -196,5 +192,43 @@ public class Tests {
         assertEquals("El resultado debe ser e,i,q,r,t,u,w,y", prueba5_5.toString(), prueba5.toString());
     }
 
+    @Test
+    public void MergeSortTest() {
+        MergeSort<Integer> integerMergeSort = new MergeSort<>();
+
+        LinkedList<Integer> merge1_t = new LinkedList<>();
+        merge1_t.addLast(63);
+        merge1_t.addLast(102);
+        merge1_t.addLast(2);
+        merge1_t.addLast(45);
+        merge1_t.addLast(71);
+        merge1_t.addLast(12);
+        merge1_t.addLast(5);
+        merge1_t.addLast(17);
+        merge1_t.addLast(15);
+        merge1_t.addLast(27);
+
+        LinkedList<Integer> merge1_s = new LinkedList<>();
+        merge1_s.addLast(2);
+        merge1_s.addLast(5);
+        merge1_s.addLast(12);
+        merge1_s.addLast(15);
+        merge1_s.addLast(17);
+        merge1_s.addLast(27);
+        merge1_s.addLast(45);
+        merge1_s.addLast(63);
+        merge1_s.addLast(71);
+        merge1_s.addLast(102);
+
+        merge1_t = integerMergeSort.mergeSort(merge1_t);
+
+        assertEquals("Prueba de MergeSort 1", merge1_s.toString(), merge1_t.toString());
+
+    }
+
+    @Test
+    public void RadixSortTest() {
+
+    }
 
 }
