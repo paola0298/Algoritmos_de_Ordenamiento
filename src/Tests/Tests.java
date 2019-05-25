@@ -197,6 +197,80 @@ public class Tests {
     }
 
     @Test
+    public void SelectionSortTest(){
+        LinkedList<Integer> list = new LinkedList<>();
+        LinkedList<String> list1 = new LinkedList<>();
+        LinkedList<Double> list2 = new LinkedList<>();
+        SelectionSort<Integer> selectionInteger = new SelectionSort<>(list);
+        SelectionSort<String> selectionString = new SelectionSort<>(list1);
+        SelectionSort<Double> selectionDouble = new SelectionSort<>(list2);
+
+        LinkedList<Integer> pruebaList1 = new LinkedList<>();
+        pruebaList1.addLast(7);
+        pruebaList1.addLast(2);
+        pruebaList1.addLast(1);
+        pruebaList1.addLast(6);
+        pruebaList1.addLast(8);
+        pruebaList1.addLast(5);
+        pruebaList1.addLast(3);
+        pruebaList1.addLast(4);
+
+        LinkedList<Integer> pruebaList1_2 = new LinkedList<>();
+        pruebaList1_2.addLast(1);
+        pruebaList1_2.addLast(2);
+        pruebaList1_2.addLast(3);
+        pruebaList1_2.addLast(4);
+        pruebaList1_2.addLast(5);
+        pruebaList1_2.addLast(6);
+        pruebaList1_2.addLast(7);
+        pruebaList1_2.addLast(8);
+
+        LinkedList<Double> pruebaLista3_1 = new LinkedList<>();
+        pruebaLista3_1.addLast(1.2);
+        pruebaLista3_1.addLast(2.4);
+        pruebaLista3_1.addLast(1.9);
+        pruebaLista3_1.addLast(6.7);
+        pruebaLista3_1.addLast(80.5);
+        pruebaLista3_1.addLast(55.5);
+        pruebaLista3_1.addLast(32.5);
+        pruebaLista3_1.addLast(455.2);
+
+        LinkedList<Double> pruebaLista3_3 = new LinkedList<>();
+        pruebaLista3_3.addLast(1.2);
+        pruebaLista3_3.addLast(1.9);
+        pruebaLista3_3.addLast(2.4);
+        pruebaLista3_3.addLast(6.7);
+        pruebaLista3_3.addLast(32.5);
+        pruebaLista3_3.addLast(55.5);
+        pruebaLista3_3.addLast(80.5);
+        pruebaLista3_3.addLast(455.2);
+
+
+        LinkedList<Integer> pruebaList4 = new LinkedList<>();
+        pruebaList4.addLast(95);
+        pruebaList4.addLast(83);
+        pruebaList4.addLast(15);
+        pruebaList4.addLast(69);
+        pruebaList4.addLast(451);
+
+        LinkedList<Integer> prueba4_4 = new LinkedList<>();
+        prueba4_4.addLast(15);
+        prueba4_4.addLast(69);
+        prueba4_4.addLast(83);
+        prueba4_4.addLast(95);
+        prueba4_4.addLast(451);
+
+        System.out.println(selectionInteger.SortSelection(pruebaList1));
+        System.out.println(selectionDouble.SortSelection(pruebaLista3_1));
+        System.out.println(selectionInteger.SortSelection(pruebaList4));
+
+
+        assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1.toString(), pruebaList1.toString());
+        assertEquals("El resultado debe ser 1.2,1.9,2.4,6.7,32.5,55.5,80.5,455.2", pruebaLista3_1.toString(), pruebaLista3_1.toString());
+        assertEquals("El resultado debe ser 15,69,83,95,451", pruebaList4.toString(), pruebaList4.toString());
+    }
+
+    @Test
     public void BubbleSortTest(){
         LinkedList<Integer> list = new LinkedList<>();
         LinkedList<String> list1 = new LinkedList<>();
@@ -301,11 +375,11 @@ public class Tests {
         pruebaList5_5.addLast("w");
         pruebaList5_5.addLast("y");
 
-        bubbleInteger.Sort(pruebaList1);
-        bubbleString.Sort(pruebaList2);
-        bubbleDouble.Sort(pruebaLista3_1);
-        bubbleInteger.Sort(pruebaList4);
-        bubbleString.Sort(pruebaList5);
+        System.out.println(bubbleInteger.Sort(pruebaList1));
+        System.out.println(bubbleString.Sort(pruebaList2));
+        System.out.println(bubbleDouble.Sort(pruebaLista3_1));
+        System.out.println(bubbleInteger.Sort(pruebaList4));
+        System.out.println(bubbleString.Sort(pruebaList5));
 
 
         assertEquals("El resultado debe ser 1,2,3,4,5,6,7,8", pruebaList1.toString(), pruebaList1.toString());
